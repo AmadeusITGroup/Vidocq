@@ -1,0 +1,15 @@
+.collection-title,
+.collection-title select {
+    font-weight: bold;
+    color: #2676c3;
+}
+
+.results {
+    font-size: 12px;
+}
+
+.list-results {
+    font-size: 12px;
+    overflow-y: scroll;
+    height: 700px;
+}

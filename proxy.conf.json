@@ -1,0 +1,23 @@
+{
+  "/databases": {
+    "target": "http://localhost:3000/"
+  },
+  "/collections": {
+    "target": "http://localhost:3000/"
+  },
+  "/count": {
+    "target": "http://localhost:3000/"
+  },
+  "/find": {
+    "target": "http://localhost:3000/"
+  },
+  "/aggregate": {
+    "target": "http://localhost:3000/"
+  },
+  "/server": {
+    "target": "http://localhost:3000/"
+  },
+  "/export": {
+    "target": "http://localhost:3000/"
+  }
+}

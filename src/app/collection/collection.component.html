@@ -1,0 +1,42 @@
+<span class="ml-3 collection-title">{{currentDatabase}}.<select class="mt-1 ml-1" [(ngModel)]="currentCollection" (ngModelChange)="changeCollection($event)"><option *ngFor="let collection of collectionList" [ngValue]="collection.name">{{collection.name}}</option></select> (total: {{itemInCollection}})</span>
+
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-5" >
+            <div class="editor">
+                <ul class="nav nav-tabs">
+                    <li *ngFor="let tab of tabList" class="nav-item">
+                        <a class="nav-link" [class.active]="tab == selectedTab" href="#" (click)="changeTab(tab, $event)">{{tab}}</a>
+                    </li>
+                </ul>
+                <app-monaco-editor #monacoEditor [query]="query"></app-monaco-editor>
+                <div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">skip</span>
+                        <input type="number" class="form-control" placeholder="skip" [(ngModel)]="skip" >
+                        <span class="input-group-addon" id="basic-addon1">limit</span>
+                        <input type="number" class="form-control" placeholder="limit" [(ngModel)]="limit">
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <button type="button" class="btn-primary btn float-right" (click)="run()">Run</button>
+                    <span class="data-format">Export as: </span>
+                    <button type="button" class="btn btn-outline-success btn-sm" (click)="exportJson()" >json</button>
+                    <button type="button" class="btn btn-outline-info btn-sm" (click)="exportCsv()" >csv</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="list-results">
+                <div class="list-group mt-3 ">
+                    <a href="#" *ngFor="let result of results" class="list-group-item list-group-item-action justify-content-between" 
+                        [class.active]="selectedResult == result"
+                        (click)="selectResult(result, $event)">{{result | json | truncate : 50 }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 editor">
+            <app-json-viewer [options]="jsonEditorOptions" [mode]="'tree'" [schema]="jsonSchema" [data]="jsonData"></app-json-viewer>
+        </div>
+    </div>
+</div>
