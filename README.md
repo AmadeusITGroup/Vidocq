@@ -1,7 +1,7 @@
 # Vidocq
 
 [![Build Status](https://secure.travis-ci.org/AmadeusITGroup/Vidocq.svg?branch=master)](http://travis-ci.org/AmadeusITGroup/Vidocq)
-![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
+[![Dependencies](https://www.versioneye.com/user/projects/59bab29c368b080043a6f9da/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59bab29c368b080043a6f9da/)
 [![GitHub Issues](https://img.shields.io/github/issues/AmadeusITGroup/Vidocq.svg)](https://github.com/AmadeusITGroup/Vidocq/issues)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
